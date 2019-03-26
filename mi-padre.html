@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="mi-padre">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `mi-padre`
+     * madre examen
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class MiPadre extends Polymer.Element {
+      static get is() { return 'mi-padre'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'mi-padre'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(MiPadre.is, MiPadre);
+  </script>
+</dom-module>
